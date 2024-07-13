@@ -1,0 +1,21 @@
+{
+  "name": "ytm-api-parser",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@img/sharp-darwin-x64": "^0.33.0",
+    "applescript": "^1.0.0",
+    "axios": "^1.6.2",
+    "express": "^4.18.2",
+    "forever": "^4.0.3",
+    "jimp": "^0.22.10",
+    "macos-audio-devices": "^1.4.0"
+  }
+}
