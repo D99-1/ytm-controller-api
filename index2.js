@@ -3,6 +3,7 @@ const axios = require('axios');
 var applescript = require('applescript');
 const fs = require('fs');
 const cors = require('cors');
+require('dotenv').config();
 
 
 const app = express();
@@ -63,7 +64,7 @@ app.get('/weather', async (req, res) => {
         }
     }
     try {
-        const response = await axios.get('https://api.openweathermap.org/data/2.5/weather?q=Sydney,aus&units=metric&APPID=ba1a5a37eabae42a73d46e9c7bf0cb40');
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Sydney,aus&units=metric&APPID=${process.env.WEATHER_API_KEY}`);
         const currentTime = new Date();
         response.data.currentTime = currentTime;
         response.data.main.temp = (Math.round(response.data.main.temp * 10) / 10).toString() + " C";
