@@ -40,7 +40,9 @@ app.get('/', async (req, res) => {
             "accentr": accentr,
             "accentg": accentg,
             "accentb": accentb,
-            "image": response.data.video.thumbnail.thumbnails[0].url.replace("https", "http")
+            "image": response.data.video.thumbnail.thumbnails[0].url.replace("https", "http"),
+            "liked": response2.data.liked,
+            "disliked": response2.data.disliked
         };
 
         res.send(newData);
